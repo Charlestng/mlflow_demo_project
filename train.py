@@ -14,6 +14,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y)
 
 # Mlflow tracking
 import sys 
+mlflow.end_run()
 mlflow.set_tracking_uri("http://kubernetes.docker.internal:5000")
 with mlflow.start_run():
     
